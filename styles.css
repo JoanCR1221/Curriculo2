@@ -1,0 +1,367 @@
+/* estilos.css */
+/* ===== Tema claro / oscuro con variables ===== */
+:root {
+  /*--bg: #f5f7fa;       
+  --text: #1e293b;     
+  --card: #ffffff;     
+  --border: #d1d5db;   
+  --brand: #2563eb;  */  
+
+ --bg: #f9fafb;      
+  --text: #111827;     
+  --card: #ffffff;   
+  --border: #d1d5db;   
+  --brand: #06b6d4;    
+}
+
+/* Tema oscuro */
+:root.dark {
+  /*--bg: #0f172a;       
+  --text: #e2e8f0;     
+  --card: #1e293b;     
+  --border: #334155;   
+  --brand: #3b82f6;  */  
+
+  --bg: #0f172a;       
+  --text: #f8fafc;     
+  --card: #1e293b;     
+  --border: #334155;   
+  --brand: #22d3ee;    
+}
+
+/* ===== Aplicar variables ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.contenedor {
+  max-width: 800px;
+  margin: auto;
+  background-color: var(--card);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 5px;
+  margin-top: 30px;
+  color: var(--text);
+}
+
+p, li {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.contacto {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contacto p {
+  margin: 5px 0;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  border: 3px solid var(--border);
+}
+
+/* ===== Formulario de contacto ===== */
+.form-row {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text);
+}
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--brand);
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ===== Botón modo oscuro ===== */
+#btn-theme {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ===== Pie de pagina ===== */
+.site-footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: var(--text, #ccc);
+}
+.site-footer a {
+  color: var(--brand, #00bcd4);
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+ /* Boton para VOLVER ARRIBA */
+#to-top {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#to-top:hover {
+  background: var(--brand);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
+
+
+
+
+/* ===== PORTFOLIO ===== */
+
+/* Menú simple */
+.menu { list-style:none; display:flex; gap:16px; padding:0; margin:0; justify-content:center; }
+.menu a { text-decoration:none; color: var(--text); font-weight:600; }
+.menu a:hover { text-decoration: underline; }
+/* Scroll suave a secciones */
+html { scroll-behavior: smooth; }
+
+
+
+/* ===== Ajuste de tamaño del menú de navegación ===== */
+.menu {
+  flex-wrap: wrap; /* Permite que el menú se parta en otra línea si no cabe */
+  gap: 12px;
+}
+
+.menu a {
+  font-size: 0.9rem; /* Más pequeño */
+  padding: 5px 8px;
+}
+
+
+
+
+/* Grid de tarjetas */
+.grid {
+  display: grid;
+  gap: 18px;
+  justify-content: center; /* Centra horizontalmente */
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1100px; /* Evita que se estire demasiado */
+  margin: 0 auto; /* Centra el grid en la página */
+}
+
+/* Tarjetas */
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.card-body { padding: 14px; }
+.project { transition: transform .2s ease, box-shadow .2s ease; }
+.project:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+
+/* Botones secundarios en tarjetas */
+.btn-outline { border: 1px solid var(--brand); background: transparent; color: var(--brand); }
+
+/* Responsive */
+@media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
+
+
+
+/* Contenedor consistente con el index */
+.contenedor { max-width: 1000px; margin: 32px auto; padding: 0 20px; }
+
+/* Títulos dentro de tarjetas */
+.card-body h2 {
+  margin: 6px 0 8px;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+/* Texto dentro de tarjetas */
+.card-body p { margin: 0 0 10px; color: var(--text); opacity: .95; }
+
+/* Botonera de cada tarjeta */
+.buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* Estados hover/focus en botones (mejor contraste) */
+.btn:hover, .btn:focus-visible { filter: brightness(1.05); }
+.btn-outline:hover, .btn-outline:focus-visible { background: var(--brand); color: #fff; }
+
+/* Accesibilidad: enfoque visible en links/tarjetas */
+.menu a:focus-visible,
+.card a:focus-visible,
+.project:focus-within {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Efecto también con teclado (no solo hover) */
+.project:focus-within { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+
+/* Si usas video en proyectos */
+.card video { width: 100%; display: block; border-bottom: 1px solid var(--border); }
+
+/* Pequeños ajustes responsive */
+@media (max-width: 900px){
+  .card img { height: 160px; }
+}
+@media (max-width: 600px){
+  .card-body h2 { font-size: 1.05rem; }
+  .card img { height: 150px; }
+}
+
+
+
+
+
+
+
+/* Tarjetas de perfiles en la landing */
+.perfiles { margin-top: 24px; }
+.profiles-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: center;
+}
+.profile-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.profile-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+.profile-avatar {
+  width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+  display: block; margin: 6px auto 10px; border: 3px solid var(--border);
+}
+.profile-name { margin: 6px 0 2px; }
+.profile-role { margin: 0 0 6px; color: var(--muted); font-weight: 600; }
+.profile-link { text-decoration: none; color: inherit; }
+
+/* Una columna en móvil */
+@media (max-width: 900px){ .profiles-grid { grid-template-columns: 1fr; } }
+
+
+
+
+
+/* ===== Acordeón ===== */
+.accordion { margin: 14px 0 10px; }
+
+.acc-toggle {
+  width: 100%;
+  text-align: left;
+  background: var(--card);
+  color: var(--text);
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.acc-toggle:hover,
+.acc-toggle[aria-expanded="true"] {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.acc-panel {
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding: 14px;
+  background: var(--card);
+}
+
+/* Animación suave (opcional) */
+.acc-panel[hidden] { display: none; }
+
+
+
+
+/* ====== Estilo de tabla de idiomas ====== */
+#idiomas table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#idiomas th, 
+#idiomas td {
+  padding: 10px;
+  text-align: center;       /* Centra horizontalmente */
+  vertical-align: middle;   /* Centra verticalmente */
+  border-bottom: 1px solid #ccc; /* Línea separadora */
+}
+
+#idiomas th {
+  background-color: #0d1b2a; /* Fondo del encabezado */
+  color: white;
+  font-weight: bold;
+}
+
+#idiomas tr:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Efecto hover */
+}
