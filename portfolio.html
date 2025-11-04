@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil — Pablo Gómez</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+</head>
+<body>
+  <button id="btn-theme" aria-pressed="false" aria-label="Alternar tema">🌓</button>
+  <button id="to-top" aria-label="Volver arriba">↑</button>
+
+  <header class="site-header">
+    <nav aria-label="Navegación principal">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#resumen">Resumen</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#hab-blandas">Habilidades</a></li>
+        <li><a href="#hab-tecnicas">Herramientas y Tecnologias</a></li>
+        <li><a href="#idiomas">Idiomas</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#enlaces">Enlaces</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Layout de 2 columnas: contenido + aside -->
+<div class="layout">
+  <!-- Columna principal -->
+  <main class="contenedor">
+    <!-- Encabezado del perfil -->
+    <section id="perfil">
+      <h1>Pablo Gómez Villegas.A</h1>
+      <img src="assets/IMG/IMG_20191224_121324.jpg" alt="Pablo Gómez" class="foto-perfil" loading="lazy">
+    </section>
+
+    <!-- ===== Acordeones ===== -->
+    <!-- Resumen -->
+    <section class="accordion" id="resumen">
+      <h2>
+        <button class="acc-toggle" id="acc-resumen" aria-expanded="false" aria-controls="panel-resumen">
+          Perfil Profesional
+        </button>
+      </h2>
+      <div id="panel-resumen" class="acc-panel" role="region" aria-labelledby="acc-resumen" hidden>
+        <p>
+          Mi nombre es <strong>Pablo Gómez Villegas</strong>, vivo en <strong>Guanacaste, Costa Rica</strong>, y actualmente curso la carrera de
+          <strong>Ingeniería en Sistemas de Información</strong>. Cuento con experiencia en el <strong>desarrollo de software y aplicaciones web</strong>,
+          con un enfoque principal en <strong>backend</strong>.
+        </p>
+        <p>
+          He trabajado en proyectos académicos y personales que incluyen la creación de una <strong>API REST para eCommerce</strong>,
+          integrando funciones de pedidos, pagos y facturación, así como un <strong>sistema de gestión hotelera</strong> con paneles de control e indicadores.
+        </p>
+        <p>
+          Me caracterizo por mi capacidad para <strong>automatizar procesos</strong>, optimizar recursos tecnológicos y diseñar soluciones escalables,
+          aplicando buenas prácticas de programación y metodologías ágiles como <strong>Scrum</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Educación -->
+    <section class="accordion" id="educacion">
+      <h2>
+        <button class="acc-toggle" id="acc-educacion" aria-expanded="false" aria-controls="panel-educacion">
+          Educación
+        </button>
+      </h2>
+      <div id="panel-educacion" class="acc-panel" role="region" aria-labelledby="acc-educacion" hidden>
+        <ul>
+          <li><strong>Colegio Técnico Profesional La Mansión</strong> — Técnico en Electrotecnia</li>
+          <li><strong>Universidad Nacional de Costa Rica</strong> — Ingeniería en Sistemas de Información</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Habilidades blandas -->
+    <section class="accordion" id="hab-blandas">
+      <h2>
+        <button class="acc-toggle" id="acc-hab-blandas" aria-expanded="false" aria-controls="panel-hab-blandas">
+          Habilidades
+        </button>
+      </h2>
+      <div id="panel-hab-blandas" class="acc-panel" role="region" aria-labelledby="acc-hab-blandas" hidden>
+        <ul>
+          <li>Trabajo en equipo y colaboración interdisciplinaria</li>
+          <li>Comunicación efectiva</li>
+          <li>Adaptabilidad y aprendizaje continuo</li>
+          <li>Gestión del tiempo y priorización</li>
+          <li>Orientación a resultados</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Herramientas -->
+    <section class="accordion" id="hab-tecnicas">
+      <h2>
+        <button class="acc-toggle" id="acc-herramientas" aria-expanded="false" aria-controls="panel-herramientas">
+          Herramientas y Tecnologías
+        </button>
+      </h2>
+      <div id="panel-herramientas" class="acc-panel" role="region" aria-labelledby="acc-herramientas" hidden>
+        <ul>
+          <li><strong>Lenguajes:</strong> C#, C++, SQL, HTML, CSS, JavaScript</li>
+          <li><strong>Frameworks:</strong> .NET, ASP.NET Core, Entity Framework Core</li>
+          <li><strong>BD:</strong> MySQL, SQL Server</li>
+          <li><strong>IDEs:</strong> Visual Studio, VS Code, Zinjai</li>
+          <li><strong>Otros:</strong> REST APIs, Swagger, Scrum</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Idiomas -->
+    <section class="accordion" id="idiomas">
+      <h2>
+        <button class="acc-toggle" id="acc-idiomas" aria-expanded="false" aria-controls="panel-idiomas">
+          Idiomas
+        </button>
+      </h2>
+      <div id="panel-idiomas" class="acc-panel" role="region" aria-labelledby="acc-idiomas" hidden>
+        <table class="table-idiomas">
+          <thead>
+            <tr><th>Idioma</th><th>Nivel</th><th>Certificación</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Español</td><td>Nativo</td><td>—</td></tr>
+            <tr><td>Inglés</td><td>Intermedio</td><td>NO</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="accordion" id="experiencia">
+      <h2>
+        <button class="acc-toggle" id="acc-experiencia" aria-expanded="false" aria-controls="panel-experiencia">
+          Experiencia
+        </button>
+      </h2>
+      <div id="panel-experiencia" class="acc-panel" role="region" aria-labelledby="acc-experiencia" hidden>
+        <ul>
+          <li>Mantenimiento preventivo y correctivo de sistemas eléctricos en oficinas y equipos del TSE.</li>
+          <li>Cumplimiento de normas de seguridad ocupacional y protocolos internos.</li>
+          <li>Proyectos académicos de desarrollo web.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="accordion" id="contacto">
+      <h2>
+        <button class="acc-toggle" id="acc-contacto" aria-expanded="false" aria-controls="panel-contacto">
+          Contacto
+        </button>
+      </h2>
+      <div id="panel-contacto" class="acc-panel" role="region" aria-labelledby="acc-contacto" hidden>
+        <form id="contact-form" data-to="pablodavidgomezv@gmail.com" novalidate>
+          <div class="form-row">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+          <div class="form-row">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+          <button class="btn" type="submit">Enviar</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Columna lateral aside-->
+  <aside class="sidebar" aria-label="Información lateral">
+
+    <section class="widget">
+      <h3>Datos rápidos</h3>
+      <ul class="plain">
+        <li><strong>Ubicación:</strong> Guanacaste, CR</li>
+        <li><strong>Interés:</strong> Backend .NET / SQL</li>
+        <li><strong>Disponibilidad:</strong> Práctica / Medio tiempo</li>
+      </ul>
+    </section>
+
+    <section class="widget">
+      <h3>Contacto</h3>
+      <ul class="plain">
+        <li><a href="mailto:pablodavidgomezv@gmail.com">pablodavidgomezv@gmail.com</a></li>
+        <li><a href="tel:+50685577803">+506 8557-7803</a></li>
+      </ul>
+    </section>
+
+     <section class="widget" id="enlaces">
+    <h3>Enlaces</h3>
+    <ul class="plain">
+      <li><a href="portfolio.html" target="_blank">Portafolio</a></li>
+      <li><a href="https://github.com/TU_USUARIO" target="_blank">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/TU_USUARIO" target="_blank">LinkedIn</a></li>
+    </ul>
+  </section>
+
+    <section class="widget">
+      <h3>Descargas</h3>
+      <a class="btn btn-outline" href="assets/CV_PabloGomez.pdf" download>Descargar CV (PDF)</a>
+    </section>
+  </aside>
+</div>
+
+  <footer class="site-footer">
+    <small>© 2025 Pablo Gómez — <a href="portfolio.html">Portafolio de Pablo</a></small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
